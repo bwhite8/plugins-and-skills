@@ -1,0 +1,8 @@
+{
+  "name": "phased-workflow",
+  "description": "Phased development workflow with brainstorming, planning, implementation, and validation commands",
+  "version": "1.0.0",
+  "author": {
+    "name": "Brian White"
+  }
+}
