@@ -20,8 +20,16 @@ Read the implementation plan at: $1
 - You have access to the `neon-db` subagent if you need to query the database for schema info, test data, or to verify migrations.
 - After implementation, verify the phase's acceptance criteria are met.
 
+**Autonomous execution:** Proceed with all actions without asking "should I proceed?" or "shall I make this change?" — just do it. Do not pause for confirmation at each step.
+
+**MANDATORY EXCEPTIONS — always ask the user before:**
+- Deleting files or directories
+- Dropping or truncating database tables
+- Any destructive operation that cannot be easily undone
+
 When complete, summarize:
 1. What you implemented
 2. Files created or modified
 3. Whether all acceptance criteria passed
 4. Any concerns or notes for subsequent phases
+5. How many phases remain (e.g., "3 of 5 phases complete — 2 phases remaining")

@@ -18,7 +18,7 @@ Discuss and validate the feasibility of an idea. No code edits — just a back-a
 /phased-workflow:plan [description of what to build]
 ```
 
-Creates a detailed, phased implementation plan saved to `./PLAN.md`. Each phase is fully self-contained so it can be implemented in a fresh context window.
+Creates a detailed, phased implementation plan saved to `~/.claude/plans/<descriptive-name>.md`. The filename is auto-generated based on the plan contents. Each phase is fully self-contained so it can be implemented in a fresh context window.
 
 ### 3. Clear Context
 
@@ -31,7 +31,7 @@ Clear the conversation context before starting implementation. This ensures each
 ### 4. Implement Phase 1
 
 ```
-/phased-workflow:implement ./PLAN.md
+/phased-workflow:implement ~/.claude/plans/<plan-name>.md
 ```
 
 Implements Phase 1 from the plan. When no phase number is provided, defaults to Phase 1.
@@ -40,7 +40,7 @@ Implements Phase 1 from the plan. When no phase number is provided, defaults to 
 
 ```
 /clear
-/phased-workflow:implement ./PLAN.md 2
+/phased-workflow:implement ~/.claude/plans/<plan-name>.md 2
 ```
 
 Clear context, then implement the next phase. All prior phases are inferred as complete — the command relies on the plan document and current codebase state, not conversation memory.
@@ -51,10 +51,16 @@ Repeat steps 5 for each remaining phase (3, 4, etc.).
 
 ```
 /clear
-/phased-workflow:validate ./PLAN.md
+/phased-workflow:validate ~/.claude/plans/<plan-name>.md
 ```
 
 After all phases are implemented, validate the entire implementation against the plan. Checks completeness, integration, and scans for critical bugs.
+
+## Autonomous Execution
+
+All commands run autonomously by default — Claude will proceed with actions without pausing to ask "should I proceed?" or "shall I make this change?" at each step. This keeps the workflow moving efficiently.
+
+**Mandatory exceptions:** Claude will always ask before performing destructive operations that cannot be easily undone, such as deleting files/directories or dropping/truncating database tables.
 
 ## Why This Workflow?
 

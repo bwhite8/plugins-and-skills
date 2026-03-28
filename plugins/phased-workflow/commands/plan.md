@@ -24,9 +24,18 @@ $ARGUMENTS
    - High-level goal of each phase (one line each)
    - Estimated complexity per phase (low/medium/high)
 
-4. Save the plan as a markdown file at: ./PLAN.md
+4. Save the plan as a markdown file at: /Users/brianwhite/.claude/plans/<descriptive-filename>.md
+   - The filename should be a short, kebab-case description of what the plan covers (e.g., `add-user-auth.md`, `refactor-api-routes.md`)
+   - Do NOT use generic names like `PLAN.md` or `plan.md`
 
 5. Do NOT implement anything. Only create the plan document.
+
+**Autonomous execution:** Proceed with all actions without asking "should I proceed?" or "shall I make this change?" — just do it. Do not pause for confirmation at each step.
+
+**MANDATORY EXCEPTIONS — always ask the user before:**
+- Deleting files or directories
+- Dropping or truncating database tables
+- Any destructive operation that cannot be easily undone
 
 After creating the plan, tell me:
 - The filepath where you saved it

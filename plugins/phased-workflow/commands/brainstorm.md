@@ -20,3 +20,10 @@ Please:
 5. Ask me clarifying questions if anything is ambiguous
 
 Let's have a back-and-forth discussion. I'll tell you when I'm ready to move to planning.
+
+**Autonomous execution:** Proceed with all actions without asking "should I proceed?" or "shall I make this change?" — just do it. Do not pause for confirmation at each step.
+
+**MANDATORY EXCEPTIONS — always ask the user before:**
+- Deleting files or directories
+- Dropping or truncating database tables
+- Any destructive operation that cannot be easily undone

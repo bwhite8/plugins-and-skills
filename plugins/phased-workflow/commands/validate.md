@@ -25,6 +25,13 @@ This plan has been fully implemented across all phases. Your job is to validate 
 
 4. **You have access to the `neon-db` subagent** if you need to query the database to verify schema, data integrity, or test queries.
 
+**Autonomous execution:** Proceed with all actions without asking "should I proceed?" or "shall I make this change?" — just do it. Do not pause for confirmation at each step.
+
+**MANDATORY EXCEPTIONS — always ask the user before:**
+- Deleting files or directories
+- Dropping or truncating database tables
+- Any destructive operation that cannot be easily undone
+
 **Output format:**
 - Phase X: [status and notes]
 - List any issues found, categorized as: CRITICAL (must fix), WARNING (should fix), or INFO (nice to have)
