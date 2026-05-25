@@ -1,6 +1,5 @@
 ---
 description: "Brainstorm and validate feasibility of an idea before planning. Discuss approach without making any code edits."
-model: claude-opus-4-6
 allowed-tools: Read, Grep, Glob, LS
 ---
 

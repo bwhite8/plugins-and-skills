@@ -1,6 +1,5 @@
 ---
 description: "Enter plan mode and create a phased implementation plan with self-contained phases. Use after brainstorming."
-model: claude-opus-4-6
 argument-hint: "[description of what to plan]"
 ---
 

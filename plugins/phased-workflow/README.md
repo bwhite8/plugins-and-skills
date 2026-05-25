@@ -56,6 +56,15 @@ Repeat steps 5 for each remaining phase (3, 4, etc.).
 
 After all phases are implemented, validate the entire implementation against the plan. Checks completeness, integration, and scans for critical bugs.
 
+## Cross-Phase Memory
+
+Because each phase is implemented in a fresh context (after `/clear`), the workflow keeps a lightweight scratchpad to bridge phases: a companion file next to the plan named `<plan-name>-history.md` (e.g. `add-user-auth.md` → `add-user-auth-history.md`).
+
+- **During `implement`**: before working, Claude reads the history file (if present) for context the prior phases chose to carry forward. After working, it appends a short, token-efficient note for the current phase — decisions made, deviations from the plan, names/interfaces later phases must match, and gotchas. The plan stays the source of truth; the history file only supplements it.
+- **During `validate`**: Claude reads the history file to focus its review on recorded deviations and gotchas, then deletes it as cleanup once validation passes. If validation surfaces CRITICAL issues, the file is retained so you can fix and re-validate with the notes intact.
+
+The history file is auto-managed — you don't need to create or edit it yourself.
+
 ## Autonomous Execution
 
 All commands run autonomously by default — Claude will proceed with actions without pausing to ask "should I proceed?" or "shall I make this change?" at each step. This keeps the workflow moving efficiently.
