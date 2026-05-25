@@ -1,0 +1,19 @@
+{
+  "name": "brian-white-plugins",
+  "description": "Claude Code plugins and skills for development workflows, created by Brian White.",
+  "owner": {
+    "name": "Brian White",
+    "email": "devbrianwhite@gmail.com"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "phased-workflow",
+      "source": "./plugins/phased-workflow",
+      "description": "Structured development workflow with brainstorm, plan, implement, and validate slash commands. Keeps complex features manageable across context windows by enforcing self-contained, sequentially implemented phases.",
+      "version": "1.1.0"
+    }
+  ]
+}

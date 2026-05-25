@@ -8,6 +8,10 @@ A collection of Claude Code plugins and skills created and maintained by [Brian 
 
 Advisor and content copywriter for AI enterprise strategy and training.
 
+### [game-dev-architect](./agents/game-dev-architect.md)
+
+Senior game developer and architect with 20+ years of experience. Helps with game mechanics, engine architecture, performance optimization, progression systems, and balancing — from indie projects to AAA-scale systems.
+
 ### [neon-db](./agents/neon-db/)
 
 Database query assistant.  Leverages Neon MCP server to query a specific Neon Project ID, no project searching needed.
