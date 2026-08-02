@@ -16,7 +16,8 @@ Please:
 2. Identify potential challenges or risks
 3. Propose your recommended approach at a high level
 4. Call out any assumptions you're making
-5. Ask me clarifying questions if anything is ambiguous
+5. Note how each major piece would be proven to work — covered by tests, needs a real browser click-through, or no behavioral change to verify. Flag anything that would be hard to verify automatically, since that is where manual testing burden accumulates.
+6. Ask me clarifying questions if anything is ambiguous
 
 Let's have a back-and-forth discussion. I'll tell you when I'm ready to move to planning.
 
