@@ -13,7 +13,7 @@
       "name": "phased-workflow",
       "source": "./plugins/phased-workflow",
       "description": "Structured development workflow with brainstorm, plan, implement, and validate slash commands. Keeps complex features manageable across context windows by enforcing self-contained, sequentially implemented phases.",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }
