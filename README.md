@@ -1,6 +1,6 @@
 # plugins-and-skills
 
-A collection of Claude Code plugins and skills created and maintained by [Brian White](https://www.linkedin.com/in/brian-white-aa049a38/), AI Strategist.
+A collection of Claude Code plugins and skills.
 
 ## Agents
 
