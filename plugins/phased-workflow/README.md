@@ -89,7 +89,7 @@ Tests and lint run on **every** phase regardless of tag. Re-reading the code tha
 
 `run` dispatches each phase to a dedicated **`phased-workflow:phase-implementer`** agent that ships with this plugin (`agents/phase-implementer.md`). Its scope discipline, verification requirements, history-file contract, and report format live in its system prompt rather than being re-injected into every phase prompt — so a ten-phase run states them once instead of ten times, and the rules sit where phase content can't crowd them out.
 
-The agent deliberately does not pin a model or restrict its tools: it inherits the session model (better than hardcoding a tier that will be wrong for either the trivial or the hard phases), and it needs a broad tool surface anyway — file edits, shell for tests and lint, Playwright MCP for browser checks, and the `neon-agent` subagent for database verification.
+The agent deliberately does not pin a model or restrict its tools: it inherits the session model (better than hardcoding a tier that will be wrong for either the trivial or the hard phases), and it needs a broad tool surface anyway — file edits, shell for tests and lint, and Playwright MCP for browser checks.
 
 If the agent type cannot be resolved, `run` falls back to `general-purpose`, inlines a condensed version of the rules, and says so in its output rather than silently running an undisciplined agent.
 

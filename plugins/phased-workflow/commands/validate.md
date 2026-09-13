@@ -34,8 +34,6 @@ This plan has been fully implemented across all phases. Your job is to validate 
    - Race conditions or data-integrity problems across phases
    - Edge cases implied by the plan but never exercised by any test or browser check
 
-7. **You have access to the `neon-agent` subagent** if you need to query the database to verify schema, data integrity, or test queries.
-
 **Autonomous execution:** Proceed with all actions without asking "should I proceed?" or "shall I make this change?" — just do it. Do not pause for confirmation at each step.
 
 **MANDATORY EXCEPTIONS — always ask the user before:**

@@ -34,8 +34,6 @@ Anything you could not confirm goes in an explicit **Unverified** list. Never fo
 
 Destructive operations **described in the plan** were approved by the user before the run started — perform them without asking. Any destructive operation **not** described in the plan (deleting files or directories, dropping or truncating tables, anything not easily undone): stop and report instead of performing it.
 
-You may use the `neon-agent` subagent to query the database for schema, test data, or migration verification.
-
 ## History handoff
 
 Before reporting, append to the history file. Create it if absent, with first line `# <plan filename> — implementation history`. Use the exact heading `## Phase <N> — <short phase title>`, then 3–7 tight bullets — skip any that don't apply:

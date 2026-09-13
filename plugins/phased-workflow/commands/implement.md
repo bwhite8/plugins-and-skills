@@ -22,7 +22,6 @@ Read the implementation plan at: $1
 **Important context:**
 - Each phase in this plan is self-contained. Everything you need to know is described within the phase itself.
 - No prior phases are in your working memory. Rely on the plan document, the history file (if present), and the current state of the codebase.
-- You have access to the `neon-agent` subagent if you need to query the database for schema info, test data, or to verify migrations.
 
 **Verify the phase before declaring it done — do NOT skip this:**
 

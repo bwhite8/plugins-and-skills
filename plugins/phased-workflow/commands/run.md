@@ -43,7 +43,6 @@ Run the full validation pass (the same work `/phased-workflow:validate $1` does 
 4. Integration check: broken cross-phase references, inconsistent interfaces, schema mismatches.
 5. `/code-review` over the full diff for this plan's work (plain local review — the `ultra` variant is user-launched only; recommend it to me if the diff warrants it). Then `/security-review` over the same diff, weighted toward auth boundaries, admin-only routes, raw SQL interpolation, and secret handling. If either is unavailable in this session, do the equivalent review inline and say which you substituted.
 6. Residual scan for what a diff-scoped review cannot see: cross-phase race conditions and data-integrity problems, plus edge cases the plan implies that no test or browser check exercises.
-7. Use the `neon-agent` subagent if you need to verify schema, data integrity, or test queries against the database.
 
 **History cleanup:** if validation passed with NO CRITICAL issues, delete the `-history.md` file and confirm you did. If there are CRITICAL issues, retain it and say why. Never delete the plan itself or any other file.
 
